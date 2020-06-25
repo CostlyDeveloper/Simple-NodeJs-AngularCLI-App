@@ -18,11 +18,9 @@ export class ImageProcessorService {
         );
     }
 
-    // getter za dohvat slike prema Enumu
-    getImg(_EnumName: string): ImageInfo {
-        return this.ImageList.find(img => img.EnumName === _EnumName) || new ImageInfo('', '', ''); // new ImageInfo je zaštita ukoliko je
-                                                                                                    // krivi unos developera da se ne
-                                                                                                    // pojavi bug
+    // getter za dohvat slike prema Enum-u
+    public getImg(_EnumName: string): ImageInfo {
+        return this.ImageList.find(img => img.EnumName === _EnumName) || new ImageInfo('', '', ''); // new ImageInfo je zaštita
     }
 }
 

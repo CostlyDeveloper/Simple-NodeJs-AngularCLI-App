@@ -1,28 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ImageProcessorService } from '../../../layers/user-view/image-processor.service';
+import { menuAnimation } from '../../../layers/user-view/animations/menu-animation';
 
 @Component({
     selector   : 'app-header',
     templateUrl: './header.component.html',
     styleUrls  : ['./header.component.scss'],
-    animations : [
-        trigger('toggleHeight', [
-            state('hide', style({
-                height  : '0px',
-                opacity : '0',
-                overflow: 'hidden'
-                // display: 'none'
-            })),
-            state('show', style({
-                height : '*',
-                opacity: '1'
-                // display: 'block'
-            })),
-            transition('hide => show', animate('200ms ease-in')),
-            transition('show => hide', animate('200ms ease-out'))
-        ])
-    ]
+    animations : [menuAnimation]
 })
 export class HeaderComponent implements OnInit {
 
@@ -34,7 +18,8 @@ export class HeaderComponent implements OnInit {
     ngOnInit(): void {
         // Generator izbornika koristi klasu MenuItem
         this.menuItems.push(
-            new MenuItem('Home', '/')
+            new MenuItem('Home', '/'),
+            new MenuItem('Contact', '/contact')
         );
 
     }

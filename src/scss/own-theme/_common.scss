@@ -1,5 +1,9 @@
 @import 'variables';
 
+:focus {
+  outline: 0;
+  }
+
 .pointer {
   cursor: pointer;
   }
