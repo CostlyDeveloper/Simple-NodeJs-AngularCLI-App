@@ -11,4 +11,11 @@ export namespace DataClass {
         Request: any;
     } // Request
 
+    export class Message {
+        Code: string        = null;
+        Title: string       = '';
+        Message: string     = '';
+        Description: string = '';
+    } // interface Message
+
 } // namespace DataClass

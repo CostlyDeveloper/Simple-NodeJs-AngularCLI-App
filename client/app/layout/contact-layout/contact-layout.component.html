@@ -22,6 +22,15 @@
                         <textarea formControlName="Message" rows="3" class="form-control"></textarea>
                 </div>
             </div>
+            <div class="col-md-6 mt-4">
+    
+                <div *ngIf="showNotification" [ngClass]="notification.Title === 'Success' ? 'alert-success' : 'alert-danger' " class="alert">
+                    
+                    <h5>{{notification.Message}}</h5>
+                    <p>{{notification.Description}}</p>
+                </div>
+                
+            </div>
         </div>
         <div class="row mb-2">
             <div class="col-md-6">

@@ -2,9 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 
+## Development client
+
+Run `ng serve` for a dev client server. Navigate to `http://localhost:4200/`. 
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+Run `nodemon app.js` for a dev backend api server.  
+
 
 ## User Story
 The application has 2 responsive pages, Home page, and Contact page. The user is able to fulfill the contact form on the contact page. 

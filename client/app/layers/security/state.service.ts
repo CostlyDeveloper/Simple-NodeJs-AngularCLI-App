@@ -17,8 +17,9 @@ export class StateService {
             this.webConfig = this.securityService.decode(config);
             config = null;
         } else {
-            const sub = this.getLocal('/assets/web-config.json').subscribe((_Data: IConfig) => {
+            const sub = this.getLocal('./assets/web-config.json').subscribe((_Data: IConfig) => {
                 this.webConfig = _Data;
+                localStorage.setItem('Config', this.securityService.encode(this.webConfig));
                 sub.unsubscribe();
             });
         }
